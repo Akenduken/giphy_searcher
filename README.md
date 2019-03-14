@@ -1,16 +1,35 @@
 # giphy_searcher
 
-A new Flutter application.
+A new Flutter application for searching gifs via Giphy service.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+Just clone the project and call
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+``` bash
+flutter packages get
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+project uses [http](https://pub.dartlang.org/packages/http) package for Giphy requests
+
+## Time scales
+
+Overall it took little bit more than 5 hours
+Major time consuming part was flutter documentation for widgets.
+
+## Weak parts
+
+Full giphy response parsing is not implemented, just part of it.
+
+I used hardcore url constructor for images (due to limitation of time I decided to make in this way)
+
+Not all response variants or errors may be handled
+
+Everything is written in one file. Not enough time for me (and I'm not familiar with flutter project structure) to separate in different files.
+At least Model, Views.
+
+Implementation of widgets tree could be better.
+
+Poor testing part, lack of mocking api responses, unit tests, widget test. Just few lines of code
+
